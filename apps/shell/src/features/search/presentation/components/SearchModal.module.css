@@ -1,0 +1,124 @@
+.backdrop {
+  background: var(--background-color);
+  inset: 0;
+  overflow-y: auto;
+  position: fixed;
+  z-index: 100;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1120px;
+  min-height: 100%;
+  padding: 24px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  margin: 0;
+}
+
+.closeButton,
+.clearButton,
+.retryButton {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 9px;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 10px 14px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.input {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-primary);
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+}
+
+.submitButton {
+  background: var(--accent-color);
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0 22px;
+}
+
+.hint,
+.status,
+.incrementalLoading {
+  color: var(--text-secondary);
+}
+
+.hint { margin: 0 0 30px; }
+.validation { color: var(--error-color); margin: -18px 0 24px; }
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.status {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 36px;
+  text-align: center;
+}
+
+.status h2 { color: var(--text-primary); margin-top: 0; }
+.status .retryButton { margin-top: 8px; }
+
+.skeleton {
+  aspect-ratio: 0.82;
+  background: linear-gradient(90deg, var(--surface-color), var(--border-color), var(--surface-color));
+  background-size: 200% 100%;
+  border-radius: 18px;
+  animation: shimmer 1.25s infinite linear;
+}
+
+.incrementalLoading {
+  padding: 24px;
+  text-align: center;
+}
+
+.sentinel { height: 1px; }
+
+@keyframes shimmer {
+  to { background-position: -200% 0; }
+}
+
+@media (max-width: 850px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 520px) {
+  .container { padding: 18px; }
+  .form { align-items: stretch; flex-direction: column; }
+  .submitButton { padding: 13px; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton { animation: none; }
+}

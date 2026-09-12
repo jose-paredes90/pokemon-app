@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/login", "destination": "/index.html" },
+    { "source": "/history", "destination": "/index.html" },
+    { "source": "/pokemon/:pokemonId", "destination": "/index.html" }
+  ]
+}

@@ -1,0 +1,31 @@
+.page {
+  display: grid;
+  min-height: 100vh;
+  padding: 24px;
+  place-items: center;
+}
+
+.status {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+  max-width: 560px;
+  padding: 36px;
+  text-align: center;
+}
+
+.status p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.status button {
+  background: var(--accent-color);
+  border: 0;
+  border-radius: 9px;
+  color: white;
+  cursor: pointer;
+  margin-top: 12px;
+  padding: 10px 16px;
+}

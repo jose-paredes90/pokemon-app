@@ -1,0 +1,30 @@
+.card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  text-align: left;
+  transition: border-color 160ms ease, transform 160ms ease;
+  width: 100%;
+}
+
+.card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.image {
+  aspect-ratio: 1;
+  object-fit: contain;
+  width: 100%;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
